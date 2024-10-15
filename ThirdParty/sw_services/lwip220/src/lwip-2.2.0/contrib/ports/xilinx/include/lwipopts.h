@@ -36,6 +36,11 @@
 #define __LWIPOPTS_H__
 
 #define NO_SYS 1
+#define LWIP_SOCKET 0
+#define NO_SYS_NO_TIMERS 1
+#define LWIP_COMPAT_SOCKETS 0
+#define LWIP_NETCONN 0
+
 #define SYS_LIGHTWEIGHT_PROT 1
 #define LWIP_CALLBACK_API 1
 
@@ -89,10 +94,10 @@ a lot of data that needs to be copied, this should be set high. */
 /* MEMP_NUM_TCPIPMSG: the number of struct tcpip_msg, which is used
    for sequential API communication and incoming packets. Used in
    src/api/tcpip.c. */
-#define MEMP_NUM_TCPIP_MSG      0
+// #define MEMP_NUM_TCPIP_MSG      0
 /* MEMP_NUM_SYS_TIMEOUT: the number of simulateously active
    timeouts. */
-#define MEMP_NUM_SYS_TIMEOUT    0
+#define MEMP_NUM_SYS_TIMEOUT    8
 
 /* ---------- Pbuf options ---------- */
 /* PBUF_POOL_SIZE: the number of buffers in the pbuf pool. */

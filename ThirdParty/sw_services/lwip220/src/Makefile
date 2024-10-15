@@ -6,7 +6,7 @@ COMPILER=
 ARCHIVER=
 CP=cp
 COMPILER_FLAGS=
-EXTRA_COMPILER_FLAGS=
+EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard
 EXTRA_ARCHIVE_FLAGS=rc
 LIB=liblwip4.a
 
